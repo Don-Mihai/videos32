@@ -75,11 +75,19 @@ h6 {
   height: 100%;
 }
 
+@font-face {
+  font-family: 'Main';
+  src: local('Main'), url('./main.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Main', sans-serif;
   background-image: url('./bg.jpg');
   background-size: cover;
   background-position: center;

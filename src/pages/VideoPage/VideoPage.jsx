@@ -9,7 +9,7 @@ export default function VideoPage() {
   return (
     <div className={styles.container}>
       <video className={styles.video} controls autoPlay>
-        <source src={`/path/to/video${videoId}.mp4`} type="video/mp4" />
+        <source src={`/videos/video${videoId}.mp4`} type="video/mp4" />
         Ваш браузер не поддерживает видео.
       </video>
       <br />

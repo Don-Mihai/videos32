@@ -9,6 +9,7 @@
 .title {
   font-size: 60px;
   margin-bottom: 105px;
+  opacity: 0.9;
 }
 
 .button {
@@ -19,7 +20,8 @@
   font-size: 33px;
   cursor: pointer;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .videos {
