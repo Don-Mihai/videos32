@@ -2,7 +2,10 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Main.module.css'; // Импортируем CSS-модуль
 
-const videos = [{ title: 'Начать просмотр', link: '/video/1' }];
+const videos = [
+  { title: 'История Новороссии', link: '/video/1' },
+  { title: 'Развитие Донбасса', link: '/video/2' },
+];
 
 export default function Main() {
   const navigate = useNavigate();
@@ -16,11 +19,7 @@ export default function Main() {
       <h1 className={styles.title}>ИСТОРИЯ НОВОРОССИИ</h1>
       <div className={styles.videos}>
         {videos.map((video, index) => (
-          <button
-            key={index}
-            onClick={() => handleVideoClick(video.link)}
-            className={styles.button}
-          >
+          <button key={index} onClick={() => handleVideoClick(video.link)} className={styles.button}>
             {video.title}
           </button>
         ))}

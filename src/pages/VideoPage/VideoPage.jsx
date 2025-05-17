@@ -11,12 +11,9 @@ export default function VideoPage() {
   useEffect(() => {
     const checkEvent = async () => {
       try {
-        const { data: xmlString } = await axios.get(
-          'http://192.168.0.10/state.xml',
-          {
-            responseType: 'text',
-          }
-        );
+        const { data: xmlString } = await axios.get('http://192.168.0.10/state.xml', {
+          responseType: 'text',
+        });
         const parser = new DOMParser();
         const xml = parser.parseFromString(xmlString, 'application/xml');
         const node = xml.getElementsByTagName('iovalue')[0];
@@ -44,11 +41,11 @@ export default function VideoPage() {
   return (
     <div className={styles.container}>
       <video className={styles.video} controls autoPlay>
-        <source src={`/videos/video${videoId}.mp4`} type="video/mp4" />
+        <source src={`/videos/choose.mp4`} type="video/mp4" />
         Ваш браузер не поддерживает видео.
       </video>
       <br />
-      <Bottom />
+      <Bottom backUrl="/" />
     </div>
   );
 }
